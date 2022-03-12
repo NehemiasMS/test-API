@@ -1,0 +1,16 @@
+[
+    {
+        "id":"1",
+        "alumno": "m036759",
+        "inasistencias":"0",
+        "tareas": "0",
+        "participacionesnegativas": "0"
+    },
+    {
+        "id":"2",
+        "alumno": "m030000",
+        "inasistencias":"10",
+        "tareas": "20",
+        "participacionesnegativas": "2"
+    }
+]
