@@ -1,16 +1,51 @@
 [
     {
-        "id":"1",
         "alumno": "m036759",
-        "inasistencias":"0",
-        "tareas": "0",
-        "participacionesnegativas": "0"
+        "salon" : "101",
+        "tipo" : "inasistencias",
+        "valor" : "1",
+        "fecha" : "2022-02-05"
     },
     {
-        "id":"2",
-        "alumno": "m030000",
-        "inasistencias":"10",
-        "tareas": "20",
-        "participacionesnegativas": "2"
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "tareas",
+        "valor" : "1",
+        "fecha" : "2022-02-05"
+    },
+    {
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "participacionesnegativas",
+        "valor" : "1",
+        "fecha" : "2022-02-05"
+    },
+    {
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "inasistencias",
+        "valor" : "1",
+        "fecha" : "2022-03-26"
+    },
+    {
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "inasistencias",
+        "valor" : "1",
+        "fecha" : "2022-04-26"
+    },
+    {
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "inasistencias",
+        "valor" : "1",
+        "fecha" : "2022-05-26"
+    },
+    {
+        "alumno": "m036759",
+        "salon" : "101",
+        "tipo" : "inasistencias",
+        "valor" : "1",
+        "fecha" : "2022-06-26"
     }
 ]
