@@ -10,12 +10,6 @@ var url = "mongodb://localhost:27017/";
 MongoClient.connect(url, function(err, db) {
   var dbo = db.db("tripleT");
 
-  dbo.collection("users").findOne({}, function(err, result) {
-    console.log(result.name);
-    //db.close();
-
-  });
-
   const alumnos = require('./data.json');
 
   const usersDB = require('./ttt_usersDB.json');
@@ -63,10 +57,7 @@ MongoClient.connect(url, function(err, db) {
       dbo.collection("users").find({name:name}).toArray(function(err, result) {
         var userData = result[0];
         
-        //console.log(userData);
-
         dbo.collection("tournaments").find({}).toArray(function(err, resultTournaments) {
-            //console.log(result);
 
             // loop through elements in tournaments to find player tournaments
             userData.tournaments.forEach(element => {
@@ -100,7 +91,6 @@ MongoClient.connect(url, function(err, db) {
                         flag = true;
                         if(selectedMatch.tournament == selectedTourney.id && flag){
                             if(selectedMatch.status == "unfinished"){
-                                //console.log(selectedTourney.name+ " next match is: "+ selectedMatch.id);
                                 flag = false;
                                 activeTournaments[cont].push(selectedMatch)
                                 cont ++;
@@ -118,7 +108,6 @@ MongoClient.connect(url, function(err, db) {
                             tempUserData = [];
                             if(selectedUser.id == selectedTourney[1].opponents[0] || selectedUser.id == selectedTourney[1].opponents[1]){
                                 tempUserData.push([selectedUser.name, selectedUser.pp])
-                                //console.log("user for game is: "+selectedUser.name);
                                 selectedTourney.push(tempUserData);
                             }
 
@@ -134,10 +123,6 @@ MongoClient.connect(url, function(err, db) {
 
                     })
                     
-                    console.log("active Tournaments");
-                    console.log(activeTournaments);
-                    console.log("-------------------------");
-                    console.log(activeTournaments[0][3]);
                     finalResponse.push(activeTournaments);
                     finalResponse.push(finishedTournaments);
                     res.json(finalResponse)
